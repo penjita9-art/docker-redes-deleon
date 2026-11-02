@@ -7,8 +7,6 @@ if (req.url === '/status') {
 res.writeHead(200);
 res.end(JSON.stringify({
 
-Sistemas Operativos - 4.º año
-
 servicio: 'api-interna',
 estado: 'ok',
 puerto: PORT
