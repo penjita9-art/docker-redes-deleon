@@ -27,7 +27,12 @@ const server = http.createServer(async (req, res) => {
     }
 
     try {
-      const respuesta = await fetch(API_URL);
+      // Asegura que siempre consulte a /status o /api sin duplicar barras
+      const urlDestino = API_URL.endsWith('/status') || API_URL.endsWith('/api')
+        ? API_URL
+        : `${API_URL.replace(/\/$/, '')}/api`;
+
+      const respuesta = await fetch(urlDestino);
       const datos = await respuesta.text();
       
       // Mantenemos el código de estado que devuelva la API interna (ej. 200, 404, etc.)
