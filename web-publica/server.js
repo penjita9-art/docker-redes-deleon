@@ -44,9 +44,9 @@ const server = http.createServer(async (req, res) => {
   // Ruta principal (Interfaz HTML)
   res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
   res.end(`
-    <h1>Redes con Docker</h1>
-    <p>Sistemas Operativos - 4.º año</p>
-    <p>Servicio público funcionando</p>
+    <h1>Redes con Ñocker</h1>
+    <p>Sistemas Operativardos - 4.º año</p>
+    <p>Servicio público funcionardopolis</p>
     <p>Versión: <strong>${VERSION}</strong></p>
     <ul>
       <li><a href="/health">Comprobar /health</a></li>
